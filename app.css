@@ -7,12 +7,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: move;
+  animation: spin;
   animation-duration: 3s;
   /* animation-iteration-count: 2; */
   /* animation-direction: reverse;
   animation-delay: 2s; */
   animation-timing-function: ease-in;
+}
+
+h1 {
+  animation-name: spin;
+  animation-duration: 3s;
+  display: inline-block;
 }
 
 /* @keyframes colorchange {
@@ -24,14 +30,14 @@
   }
 } */
 
-/* @keyframes spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(180deg);
   }
-} */
+}
 
 /* @keyframes rainbow {
   0% {
@@ -47,7 +53,7 @@
     background: violet;
   }
 } */
-
+/* 
 @keyframes move {
   0% {
     transform: translateX(0);
@@ -64,4 +70,4 @@
     transform: translateX(0px);
     background: yellow;
   }
-}
+} */
