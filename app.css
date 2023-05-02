@@ -1,24 +1,41 @@
 body {
+  height: 100vh;
   display: grid;
   place-content: center;
-  height: 100vh;
-  background: black;
 }
 
-.spinner {
-  width: 200px;
-  height: 200px;
-  border: 12px solid gray;
-  border-top-color: #3f51b5;
+.loader span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #03a9f4;
   border-radius: 50%;
-  animation: spin 1s infinite ease-in-out;
+  margin: 0 10px;
 }
 
-@keyframes spin {
+.loader span:nth-child(1) {
+  animation: jump 1s infinite ease-in-out;
+}
+.loader span:nth-child(2) {
+  animation: jump 1s infinite 0.3333s ease-in-out;
+}
+.loader span:nth-child(3) {
+  animation: jump 1s infinite 0.6666s ease-in-out;
+}
+
+/* .loader span:nth-child(1) {
+  transform: translateY(-20px);
+} */
+
+@keyframes jump {
   0% {
-    transform: rotate(0deg);
+    transform: translateY(0) scale(1);
   }
-  100% {
-    transform: rotate(360deg);
+  30% {
+    transform: translateY(-20px) scale(1.2);
+  }
+
+  75% {
+    transform: translateY(0px) scale(1);
   }
 }
