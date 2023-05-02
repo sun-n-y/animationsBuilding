@@ -1,72 +1,24 @@
-.box {
-  width: 400px;
-  height: 400px;
-  background: rebeccapurple;
-  color: white;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: spin;
-  animation-duration: 3s;
-  /* animation-iteration-count: 2; */
-  /* animation-direction: reverse;
-  animation-delay: 2s; */
-  animation-timing-function: ease-in;
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: black;
 }
 
-h1 {
-  animation: spin 1s ease reverse;
-  display: inline-block;
+.spinner {
+  width: 200px;
+  height: 200px;
+  border: 12px solid gray;
+  border-top-color: #3f51b5;
+  border-radius: 50%;
+  animation: spin 1s infinite ease-in-out;
 }
-
-/* @keyframes colorchange {
-  from {
-    background: pink;
-  }
-  to {
-    background: cyan;
-  }
-} */
 
 @keyframes spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(180deg);
+  100% {
+    transform: rotate(360deg);
   }
 }
-
-/* @keyframes rainbow {
-  0% {
-    background: red;
-  }
-  20% {
-    background: yellow;
-  }
-  50% {
-    background: green;
-  }
-  100% {
-    background: violet;
-  }
-} */
-/* 
-@keyframes move {
-  0% {
-    transform: translateX(0);
-    background: purple;
-  }
-  50% {
-    transform: translateX(500px);
-  }
-  75% {
-    transform: translateX(800px);
-    background: mediumblue;
-  }
-  100% {
-    transform: translateX(0px);
-    background: yellow;
-  }
-} */
