@@ -4,38 +4,22 @@ body {
   place-content: center;
 }
 
-.loader span {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: #03a9f4;
-  border-radius: 50%;
-  margin: 0 10px;
+.box {
+  background: tomato;
+  height: 200px;
+  width: 200px;
+  animation: 2s move ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
-.loader span:nth-child(1) {
-  animation: jump 1s infinite ease-in-out;
-}
-.loader span:nth-child(2) {
-  animation: jump 1s infinite 0.3333s ease-in-out;
-}
-.loader span:nth-child(3) {
-  animation: jump 1s infinite 0.6666s ease-in-out;
-}
-
-/* .loader span:nth-child(1) {
-  transform: translateY(-20px);
-} */
-
-@keyframes jump {
+@keyframes move {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translateX(0);
+    background: hotpink;
   }
-  30% {
-    transform: translateY(-20px) scale(1.2);
-  }
-
-  75% {
-    transform: translateY(0px) scale(1);
+  100% {
+    transform: translateX(300px);
+    background: olivedrab;
   }
 }
