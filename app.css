@@ -16,8 +16,7 @@
 }
 
 h1 {
-  animation-name: spin;
-  animation-duration: 3s;
+  animation: spin 1s ease reverse;
   display: inline-block;
 }
 
