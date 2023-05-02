@@ -9,6 +9,10 @@
   align-items: center;
   animation: move;
   animation-duration: 3s;
+  /* animation-iteration-count: 2; */
+  /* animation-direction: reverse;
+  animation-delay: 2s; */
+  animation-timing-function: ease-in;
 }
 
 /* @keyframes colorchange {
@@ -52,8 +56,12 @@
   50% {
     transform: translateX(500px);
   }
-  100% {
-    transform: translateX(250px);
+  75% {
+    transform: translateX(800px);
     background: mediumblue;
+  }
+  100% {
+    transform: translateX(0px);
+    background: yellow;
   }
 }
